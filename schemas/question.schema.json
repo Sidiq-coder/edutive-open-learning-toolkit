@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edutive.org/schemas/question.schema.json",
+  "title": "Edutive Question Schema",
+  "description": "Initial schema for educational multiple-choice questions.",
+  "type": "object",
+  "required": [
+    "id",
+    "subject",
+    "topic",
+    "difficulty",
+    "question",
+    "options",
+    "answer_key",
+    "explanation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique question identifier."
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject name."
+    },
+    "topic": {
+      "type": "string",
+      "description": "Main topic."
+    },
+    "subtopic": {
+      "type": "string",
+      "description": "Specific subtopic."
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Question difficulty level."
+    },
+    "cognitive_level": {
+      "type": "string",
+      "enum": ["recall", "understanding", "application", "analysis", "evaluation", "creation"],
+      "description": "Learning or cognitive level."
+    },
+    "question": {
+      "type": "string",
+      "description": "Question text."
+    },
+    "options": {
+      "type": "object",
+      "required": ["A", "B", "C", "D"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "answer_key": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D"],
+      "description": "Correct answer option key."
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Explanation of the correct answer."
+    },
+    "common_misconception": {
+      "type": "string",
+      "description": "Common mistake or misconception related to the question."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "description": "Optional image reference for image-based questions."
+    }
+  },
+  "additionalProperties": false
+}
