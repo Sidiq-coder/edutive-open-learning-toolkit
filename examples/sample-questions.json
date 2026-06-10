@@ -1,0 +1,62 @@
+[
+  {
+    "id": "MTK-001",
+    "subject": "Mathematics",
+    "topic": "Functions",
+    "subtopic": "Linear Functions",
+    "difficulty": "medium",
+    "cognitive_level": "application",
+    "question": "If f(x) = 2x + 3, what is f(4)?",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "10",
+      "D": "11"
+    },
+    "answer_key": "D",
+    "explanation": "Substitute x = 4 into f(x) = 2x + 3, so f(4) = 2(4) + 3 = 11.",
+    "common_misconception": "Students may forget to substitute x with 4 before calculating.",
+    "tags": ["function", "linear-function", "substitution"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-002",
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "subtopic": "Linear Equations",
+    "difficulty": "easy",
+    "cognitive_level": "understanding",
+    "question": "Solve for x: 3x + 6 = 15.",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "answer_key": "B",
+    "explanation": "Subtract 6 from both sides to get 3x = 9, then divide by 3 to get x = 3.",
+    "common_misconception": "Students may divide before subtracting 6 from both sides.",
+    "tags": ["algebra", "linear-equation"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-003",
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "subtopic": "Triangle Area",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "A triangle has a base of 10 cm and a height of 6 cm. What is its area?",
+    "options": {
+      "A": "16 cm²",
+      "B": "30 cm²",
+      "C": "60 cm²",
+      "D": "120 cm²"
+    },
+    "answer_key": "B",
+    "explanation": "The area of a triangle is 1/2 × base × height, so the area is 1/2 × 10 × 6 = 30 cm².",
+    "common_misconception": "Students may forget to multiply by 1/2 and choose 60 cm².",
+    "tags": ["geometry", "triangle", "area"],
+    "image_url": null
+  }
+]
