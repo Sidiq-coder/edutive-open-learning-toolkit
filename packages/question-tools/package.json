@@ -1,0 +1,30 @@
+{
+  "name": "@edutive/question-tools",
+  "version": "0.1.0",
+  "description": "Validation tools for Edutive question datasets.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "edutive-question-tools": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "validate:sample": "tsx src/cli.ts validate ../../examples/sample-questions.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "keywords": [
+    "education",
+    "question-bank",
+    "dataset",
+    "validator",
+    "edtech"
+  ]
+}
