@@ -1,0 +1,23 @@
+{
+  "name": "edutive-open-learning-toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open source toolkit for question datasets, learning diagnostics, and adaptive education workflows.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "check": "npm run check --workspaces",
+    "validate:sample": "npm run validate:sample -w @edutive/question-tools"
+  },
+  "keywords": [
+    "education",
+    "edtech",
+    "adaptive-learning",
+    "learning-analytics",
+    "question-bank",
+    "dataset"
+  ]
+}
