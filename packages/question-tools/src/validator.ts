@@ -29,9 +29,12 @@ function addIssue(issues: ValidationIssue[], path: string, message: string): voi
   issues.push({ path, message });
 }
 
-function validateQuestion(question: unknown, index: number): ValidationIssue[] {
+export interface ValidateQuestionDatasetOptions {
+  pathFormatter?: (index: number) => string;
+}
+
+function validateQuestion(question: unknown, basePath: string): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
-  const basePath = `[${index}]`;
 
   if (!isObject(question)) {
     addIssue(issues, basePath, "Question item must be an object.");
@@ -94,7 +97,10 @@ function validateQuestion(question: unknown, index: number): ValidationIssue[] {
   return issues;
 }
 
-export function validateQuestionDataset(dataset: unknown): ValidationResult {
+export function validateQuestionDataset(
+  dataset: unknown,
+  options: ValidateQuestionDatasetOptions = {}
+): ValidationResult {
   const issues: ValidationIssue[] = [];
 
   if (!Array.isArray(dataset)) {
@@ -111,7 +117,8 @@ export function validateQuestionDataset(dataset: unknown): ValidationResult {
   }
 
   dataset.forEach((question, index) => {
-    issues.push(...validateQuestion(question, index));
+    const basePath = options.pathFormatter ? options.pathFormatter(index) : `[${index}]`;
+    issues.push(...validateQuestion(question, basePath));
   });
 
   return {

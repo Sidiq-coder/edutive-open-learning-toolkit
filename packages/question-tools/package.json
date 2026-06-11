@@ -12,7 +12,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
-    "validate:sample": "tsx src/cli.ts validate ../../examples/sample-questions.json"
+    "validate:sample": "tsx src/cli.ts validate ../../examples/sample-questions.json",
+    "validate:sample:json": "tsx src/cli.ts validate ../../examples/sample-questions.json",
+    "validate:sample:csv": "tsx src/cli.ts validate ../../examples/sample-questions.csv"
   },
   "dependencies": {},
   "devDependencies": {

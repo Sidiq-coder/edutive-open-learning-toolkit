@@ -1,4 +1,6 @@
+export { parseQuestionCsv } from "./csv.js";
 export { validateQuestionDataset } from "./validator.js";
+export type { ValidateQuestionDatasetOptions } from "./validator.js";
 export type {
   CognitiveLevel,
   Difficulty,

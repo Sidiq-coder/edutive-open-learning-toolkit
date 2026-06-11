@@ -6,16 +6,17 @@ This package is the first technical module of Edutive Open Learning Toolkit. It 
 
 ## Current status
 
-Early development. The first version supports JSON dataset validation.
+Early development. The first version supports JSON and CSV dataset validation.
 
 ## Features
 
 - Validate JSON question datasets.
+- Validate CSV question datasets.
 - Check required fields.
 - Check supported difficulty values.
 - Check answer key values.
 - Check multiple choice options.
-- Report validation errors with field paths.
+- Report validation errors with field paths or CSV row numbers.
 
 ## Usage
 
@@ -26,10 +27,22 @@ npm install
 npm run validate:sample
 ```
 
-Or run directly from the package:
+## Validate JSON dataset
 
 ```bash
-npm run validate:sample -w @edutive/question-tools
+npm run validate:sample:json
+```
+
+## Validate CSV dataset
+
+```bash
+npm run validate:sample:csv
+```
+
+Or run directly:
+
+```bash
+npx tsx packages/question-tools/src/cli.ts validate examples/sample-questions.csv
 ```
 
 Expected output:
@@ -55,7 +68,6 @@ if (!result.valid) {
 
 Planned features:
 
-- CSV validation,
 - CSV to JSON conversion,
 - better error messages,
 - schema-based validation,

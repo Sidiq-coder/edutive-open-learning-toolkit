@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 
 import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { extname, resolve } from "node:path";
+import { parseQuestionCsv } from "./csv.js";
 import { validateQuestionDataset } from "./validator.js";
 
 function printHelp(): void {
   console.log(`Edutive Question Tools
 
 Usage:
-  edutive-question-tools validate <file.json>
+  edutive-question-tools validate <file.json|file.csv>
 
 Examples:
   edutive-question-tools validate examples/sample-questions.json
+  edutive-question-tools validate examples/sample-questions.csv
   npm run validate:sample
 `);
 }
@@ -19,8 +21,21 @@ Examples:
 async function validateFile(filePath: string): Promise<void> {
   const resolvedPath = resolve(process.cwd(), filePath);
   const rawContent = await readFile(resolvedPath, "utf-8");
-  const dataset = JSON.parse(rawContent) as unknown;
-  const result = validateQuestionDataset(dataset);
+  const extension = extname(resolvedPath).toLowerCase();
+
+  let dataset: unknown;
+  let pathFormatter: ((index: number) => string) | undefined;
+
+  if (extension === ".json") {
+    dataset = JSON.parse(rawContent) as unknown;
+  } else if (extension === ".csv") {
+    dataset = parseQuestionCsv(rawContent);
+    pathFormatter = (index) => `row ${index + 2}`;
+  } else {
+    throw new Error("Unsupported file type. Please provide a .json or .csv file.");
+  }
+
+  const result = validateQuestionDataset(dataset, { pathFormatter });
 
   console.log(`Total questions: ${result.totalQuestions}`);
 
