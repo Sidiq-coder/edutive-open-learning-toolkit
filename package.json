@@ -10,6 +10,7 @@
   "scripts": {
     "build": "npm run build --workspaces",
     "check": "npm run check --workspaces",
+    "test": "npm run test --workspaces",
     "validate:sample": "npm run validate:sample -w @edutive/question-tools",
     "validate:sample:json": "npm run validate:sample:json -w @edutive/question-tools",
     "validate:sample:csv": "npm run validate:sample:csv -w @edutive/question-tools"

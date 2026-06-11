@@ -64,6 +64,20 @@ if (!result.valid) {
 }
 ```
 
+## Testing
+
+Run package tests:
+
+```bash
+npm run test -w @edutive/question-tools
+```
+
+Or from the repository root:
+
+```bash
+npm test
+```
+
 ## Roadmap
 
 Planned features:
@@ -71,6 +85,5 @@ Planned features:
 - CSV to JSON conversion,
 - better error messages,
 - schema-based validation,
-- unit tests,
 - CLI package publishing,
 - and dataset quality scoring.
