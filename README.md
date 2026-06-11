@@ -1,5 +1,7 @@
 # Edutive Open Learning Toolkit
 
+[![CI](https://github.com/Sidiq-coder/edutive-open-learning-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Sidiq-coder/edutive-open-learning-toolkit/actions/workflows/ci.yml)
+
 > An open source toolkit for building structured question datasets, learning diagnostics, and adaptive education workflows.
 
 Edutive Open Learning Toolkit is an early-stage open source project designed to help students, teachers, developers, and education researchers build learning systems based on **pre-test**, **post-test**, **question banks**, **student diagnosis**, and **learning recommendations**.
@@ -149,6 +151,20 @@ edutive-open-learning-toolkit/
 - Group students by learning needs.
 
 See the full roadmap in [`docs/roadmap.md`](docs/roadmap.md).
+
+## Continuous Integration
+
+This repository uses GitHub Actions to run automated checks on every push and pull request to `main`.
+
+The CI workflow runs:
+
+```bash
+npm run check
+npm test
+npm run validate:sample:json
+npm run validate:sample:csv
+npm run convert:sample
+```
 
 ## Who is this for?
 
