@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { extname, resolve } from "node:path";
+import { convertCsvToJson } from "./converter.js";
 import { parseQuestionCsv } from "./csv.js";
 import { validateQuestionDataset } from "./validator.js";
 
@@ -10,12 +11,23 @@ function printHelp(): void {
 
 Usage:
   edutive-question-tools validate <file.json|file.csv>
+  edutive-question-tools convert <file.csv> --out <file.json>
 
 Examples:
   edutive-question-tools validate examples/sample-questions.json
   edutive-question-tools validate examples/sample-questions.csv
+  edutive-question-tools convert examples/sample-questions.csv --out examples/sample-questions.generated.json
   npm run validate:sample
 `);
+}
+
+function getFlagValue(args: string[], flag: string): string | undefined {
+  const index = args.indexOf(flag);
+  if (index === -1) {
+    return undefined;
+  }
+
+  return args[index + 1];
 }
 
 async function validateFile(filePath: string): Promise<void> {
@@ -53,35 +65,82 @@ async function validateFile(filePath: string): Promise<void> {
   process.exitCode = 1;
 }
 
+async function convertFile(filePath: string, outputPath: string): Promise<void> {
+  const resolvedInputPath = resolve(process.cwd(), filePath);
+  const resolvedOutputPath = resolve(process.cwd(), outputPath);
+  const extension = extname(resolvedInputPath).toLowerCase();
+
+  if (extension !== ".csv") {
+    throw new Error("Convert command only supports .csv input files.");
+  }
+
+  const rawContent = await readFile(resolvedInputPath, "utf-8");
+  const result = convertCsvToJson(rawContent);
+
+  await writeFile(resolvedOutputPath, `${result.json}\n`, "utf-8");
+
+  console.log(`Converted ${result.totalQuestions} question(s).`);
+  console.log(`Output written to ${outputPath}`);
+}
+
 async function main(): Promise<void> {
-  const [, , command, filePath] = process.argv;
+  const [, , command, filePath, ...args] = process.argv;
 
   if (!command || command === "--help" || command === "-h") {
     printHelp();
     return;
   }
 
-  if (command !== "validate") {
-    console.error(`Unknown command: ${command}`);
-    printHelp();
-    process.exitCode = 1;
+  if (command === "validate") {
+    if (!filePath) {
+      console.error("Missing file path.");
+      printHelp();
+      process.exitCode = 1;
+      return;
+    }
+
+    try {
+      await validateFile(filePath);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.error(`Failed to validate file: ${message}`);
+      process.exitCode = 1;
+    }
+
     return;
   }
 
-  if (!filePath) {
-    console.error("Missing file path.");
-    printHelp();
-    process.exitCode = 1;
+  if (command === "convert") {
+    if (!filePath) {
+      console.error("Missing file path.");
+      printHelp();
+      process.exitCode = 1;
+      return;
+    }
+
+    const outputPath = getFlagValue(args, "--out");
+
+    if (!outputPath) {
+      console.error("Missing required --out argument.");
+      printHelp();
+      process.exitCode = 1;
+      return;
+    }
+
+    try {
+      await convertFile(filePath, outputPath);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.error(`Failed to convert file: ${message}`);
+      process.exitCode = 1;
+    }
+
     return;
   }
 
-  try {
-    await validateFile(filePath);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error(`Failed to validate file: ${message}`);
-    process.exitCode = 1;
-  }
+  console.error(`Unknown command: ${command}`);
+  printHelp();
+  process.exitCode = 1;
 }
 
 void main();

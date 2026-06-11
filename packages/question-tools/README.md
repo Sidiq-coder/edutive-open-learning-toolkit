@@ -12,6 +12,7 @@ Early development. The first version supports JSON and CSV dataset validation.
 
 - Validate JSON question datasets.
 - Validate CSV question datasets.
+- Convert CSV question datasets into structured JSON.
 - Check required fields.
 - Check supported difficulty values.
 - Check answer key values.
@@ -52,6 +53,29 @@ Total questions: 3
 Validation passed. No issues found.
 ```
 
+## Convert CSV to JSON
+
+Convert a CSV question dataset into structured JSON:
+
+```bash
+npm run convert:sample
+```
+
+Or directly:
+
+```bash
+npx tsx packages/question-tools/src/cli.ts convert examples/sample-questions.csv --out examples/sample-questions.generated.json
+```
+
+Expected output:
+
+```text
+Converted 3 question(s).
+Output written to examples/sample-questions.generated.json
+```
+
+The converter validates the CSV dataset before writing JSON. If validation fails, no output file is generated.
+
 ## Programmatic usage
 
 ```ts
@@ -82,7 +106,6 @@ npm test
 
 Planned features:
 
-- CSV to JSON conversion,
 - better error messages,
 - schema-based validation,
 - CLI package publishing,

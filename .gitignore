@@ -143,3 +143,4 @@ vite.config.ts.timestamp-*
 .vite/
 
 AGENTS_*.md
+examples/*.generated.json

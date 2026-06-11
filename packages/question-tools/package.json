@@ -15,7 +15,8 @@
     "test": "vitest run",
     "validate:sample": "tsx src/cli.ts validate ../../examples/sample-questions.json",
     "validate:sample:json": "tsx src/cli.ts validate ../../examples/sample-questions.json",
-    "validate:sample:csv": "tsx src/cli.ts validate ../../examples/sample-questions.csv"
+    "validate:sample:csv": "tsx src/cli.ts validate ../../examples/sample-questions.csv",
+    "convert:sample": "tsx src/cli.ts convert ../../examples/sample-questions.csv --out ../../examples/sample-questions.generated.json"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
