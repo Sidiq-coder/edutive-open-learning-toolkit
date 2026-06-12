@@ -101,6 +101,12 @@ For image-based questions, use the `image_url` field.
 
 The first version of this project stores image references, not image files.
 
+Questions that require diagrams, charts, tables, maps, or other visual context can use the optional `image_url` field.
+
+For detailed guidance, read:
+
+- [`docs/image-based-questions.md`](image-based-questions.md)
+
 Example:
 
 ```json

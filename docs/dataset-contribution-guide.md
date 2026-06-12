@@ -77,6 +77,10 @@ These fields are optional but recommended:
 | `tags` | Keywords for grouping and search | `["function", "linear-function"]` |
 | `image_url` | URL for image-based questions | `null` or an image URL |
 
+For detailed guidance on questions that use images, diagrams, charts, or other visual context, read:
+
+- [`docs/image-based-questions.md`](image-based-questions.md)
+
 ## Writing Good Questions
 
 A good question should be:
@@ -314,6 +318,7 @@ Before submitting a pull request, check:
 - [ ] Every question has a helpful `explanation`.
 - [ ] I added `common_misconception` where possible.
 - [ ] I added useful `tags`.
+- [ ] For image-based questions, I included a stable `image_url` and clear visual context in the question text.
 - [ ] I validated the dataset.
 - [ ] I ran tests if I changed tooling or examples.
 - [ ] I did not commit generated output files unless requested.

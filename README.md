@@ -145,7 +145,7 @@ Question Dataset Standard -> Validator -> Converter -> Diagnostic Engine -> Reco
 | GitHub Actions CI | Automated checks for push and pull request | Available |
 | Sample Datasets | Example question datasets for testing and learning | Started |
 | Dataset Contribution Guide | Guide for contributing new question datasets | Available |
-| Image-Based Question Docs | Guide for questions that use `image_url` | Planned |
+| Image-Based Question Docs | Guide for questions that use `image_url` | Available |
 | Diagnostic Engine | Analyze student answers and detect weak topics | Planned |
 | Recommendation Engine | Recommend learning activities based on diagnosis | Planned |
 | Teacher Dashboard | Visualize student progress and class-level insights | Planned |
@@ -231,6 +231,7 @@ Useful documents:
 - [`docs/roadmap.md`](docs/roadmap.md) — project development roadmap.
 - [`docs/dataset-format.md`](docs/dataset-format.md) — current question dataset format.
 - [`docs/dataset-contribution-guide.md`](docs/dataset-contribution-guide.md) — guide for contributing question datasets.
+- [`docs/image-based-questions.md`](docs/image-based-questions.md) — guide for writing questions with diagrams, charts, or other visual context.
 - [`docs/use-cases.md`](docs/use-cases.md) — possible use cases for the toolkit.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution guidelines.
 - [`packages/question-tools/README.md`](packages/question-tools/README.md) — package usage notes.
