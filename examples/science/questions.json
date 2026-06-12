@@ -1,0 +1,102 @@
+[
+  {
+    "id": "SCI-SAMPLE-001",
+    "subject": "Science",
+    "topic": "Ecosystem",
+    "subtopic": "Food Chain",
+    "difficulty": "easy",
+    "cognitive_level": "understanding",
+    "question": "In a simple food chain, what is the role of a producer?",
+    "options": {
+      "A": "To make its own food",
+      "B": "To hunt other animals",
+      "C": "To break down dead organisms",
+      "D": "To consume only meat"
+    },
+    "answer_key": "A",
+    "explanation": "A producer, such as a plant, can make its own food through photosynthesis.",
+    "common_misconception": "Students may confuse producers with consumers.",
+    "tags": ["ecosystem", "food-chain", "producer"],
+    "image_url": null
+  },
+  {
+    "id": "SCI-SAMPLE-002",
+    "subject": "Science",
+    "topic": "Matter",
+    "subtopic": "States of Matter",
+    "difficulty": "easy",
+    "cognitive_level": "recall",
+    "question": "Which state of matter has a fixed shape and fixed volume?",
+    "options": {
+      "A": "Gas",
+      "B": "Liquid",
+      "C": "Solid",
+      "D": "Plasma"
+    },
+    "answer_key": "C",
+    "explanation": "A solid has particles packed closely together, so it keeps a fixed shape and volume.",
+    "common_misconception": "Students may think liquids have a fixed shape because they can be seen in a container.",
+    "tags": ["matter", "states-of-matter", "solid"],
+    "image_url": null
+  },
+  {
+    "id": "SCI-SAMPLE-003",
+    "subject": "Science",
+    "topic": "Energy",
+    "subtopic": "Energy Transformation",
+    "difficulty": "medium",
+    "cognitive_level": "understanding",
+    "question": "What energy transformation happens when a lamp is turned on?",
+    "options": {
+      "A": "Light energy to electrical energy",
+      "B": "Electrical energy to light energy",
+      "C": "Sound energy to heat energy",
+      "D": "Chemical energy to motion energy"
+    },
+    "answer_key": "B",
+    "explanation": "A lamp uses electrical energy and changes it into light energy, with some heat also produced.",
+    "common_misconception": "Students may reverse the direction of the energy transformation.",
+    "tags": ["energy", "energy-transformation", "electricity"],
+    "image_url": null
+  },
+  {
+    "id": "SCI-SAMPLE-004",
+    "subject": "Science",
+    "topic": "Human Body",
+    "subtopic": "Respiratory System",
+    "difficulty": "easy",
+    "cognitive_level": "recall",
+    "question": "Which organ is mainly used for breathing?",
+    "options": {
+      "A": "Heart",
+      "B": "Lungs",
+      "C": "Stomach",
+      "D": "Kidney"
+    },
+    "answer_key": "B",
+    "explanation": "The lungs are the main organs that help the body take in oxygen and release carbon dioxide.",
+    "common_misconception": "Students may confuse the heart with the lungs because both are in the chest.",
+    "tags": ["human-body", "respiratory-system", "lungs"],
+    "image_url": null
+  },
+  {
+    "id": "SCI-SAMPLE-005",
+    "subject": "Science",
+    "topic": "Scientific Method",
+    "subtopic": "Hypothesis",
+    "difficulty": "medium",
+    "cognitive_level": "application",
+    "question": "A student thinks that plants grow taller with more sunlight. What is this statement called in an experiment?",
+    "options": {
+      "A": "Conclusion",
+      "B": "Observation",
+      "C": "Hypothesis",
+      "D": "Data"
+    },
+    "answer_key": "C",
+    "explanation": "A hypothesis is a testable idea or prediction that can be investigated through an experiment.",
+    "common_misconception": "Students may confuse a hypothesis with the conclusion, which is written after the experiment.",
+    "tags": ["scientific-method", "hypothesis", "experiment"],
+    "image_url": null
+  }
+]
