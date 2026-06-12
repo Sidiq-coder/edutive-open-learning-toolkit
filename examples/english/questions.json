@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ENG-SAMPLE-001",
+    "subject": "English",
+    "topic": "Vocabulary",
+    "subtopic": "Synonym",
+    "difficulty": "easy",
+    "cognitive_level": "recall",
+    "question": "Which word has the closest meaning to 'happy'?",
+    "options": {
+      "A": "Sad",
+      "B": "Angry",
+      "C": "Glad",
+      "D": "Tired"
+    },
+    "answer_key": "C",
+    "explanation": "'Glad' has a similar meaning to 'happy'.",
+    "common_misconception": "Students may choose an opposite emotion if they do not know the word meaning.",
+    "tags": ["vocabulary", "synonym", "emotion"],
+    "image_url": null
+  },
+  {
+    "id": "ENG-SAMPLE-002",
+    "subject": "English",
+    "topic": "Simple Present Tense",
+    "subtopic": "Verb Form",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "Choose the correct sentence.",
+    "options": {
+      "A": "She go to school every day.",
+      "B": "She goes to school every day.",
+      "C": "She going to school every day.",
+      "D": "She gone to school every day."
+    },
+    "answer_key": "B",
+    "explanation": "For the subject 'she' in the simple present tense, the verb takes -s, so the correct form is 'goes'.",
+    "common_misconception": "Students may forget to add -s or -es for third-person singular subjects.",
+    "tags": ["grammar", "simple-present", "verb-form"],
+    "image_url": null
+  },
+  {
+    "id": "ENG-SAMPLE-003",
+    "subject": "English",
+    "topic": "Reading Comprehension",
+    "subtopic": "Short Text",
+    "difficulty": "medium",
+    "cognitive_level": "understanding",
+    "question": "Read the sentence: 'Lina brings an umbrella because the sky is dark.' Why does Lina bring an umbrella?",
+    "options": {
+      "A": "Because it may rain",
+      "B": "Because she wants to sleep",
+      "C": "Because she is hungry",
+      "D": "Because she lost her bag"
+    },
+    "answer_key": "A",
+    "explanation": "A dark sky can be a sign of rain, so Lina brings an umbrella.",
+    "common_misconception": "Students may focus on the object 'umbrella' without understanding the reason.",
+    "tags": ["reading-comprehension", "cause-effect"],
+    "image_url": null
+  },
+  {
+    "id": "ENG-SAMPLE-004",
+    "subject": "English",
+    "topic": "Pronouns",
+    "subtopic": "Subject Pronoun",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "Which pronoun can replace 'Rina and Sita' in the sentence 'Rina and Sita are studying'?",
+    "options": {
+      "A": "He",
+      "B": "She",
+      "C": "They",
+      "D": "It"
+    },
+    "answer_key": "C",
+    "explanation": "'Rina and Sita' refers to two people, so the correct subject pronoun is 'they'.",
+    "common_misconception": "Students may choose 'she' because both names are female, but the subject is plural.",
+    "tags": ["pronouns", "subject-pronoun", "plural"],
+    "image_url": null
+  },
+  {
+    "id": "ENG-SAMPLE-005",
+    "subject": "English",
+    "topic": "Prepositions",
+    "subtopic": "Place",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "Choose the correct preposition: 'The book is ___ the table.'",
+    "options": {
+      "A": "on",
+      "B": "at",
+      "C": "to",
+      "D": "from"
+    },
+    "answer_key": "A",
+    "explanation": "The preposition 'on' is used when something is placed on a surface.",
+    "common_misconception": "Students may choose 'at' because it can refer to location, but it does not describe being on a surface.",
+    "tags": ["prepositions", "place", "grammar"],
+    "image_url": null
+  }
+]
