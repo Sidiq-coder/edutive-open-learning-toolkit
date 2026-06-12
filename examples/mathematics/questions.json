@@ -1,0 +1,102 @@
+[
+  {
+    "id": "MTK-SAMPLE-001",
+    "subject": "Mathematics",
+    "topic": "Arithmetic",
+    "subtopic": "Order of Operations",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "What is the value of 6 + 4 x 2?",
+    "options": {
+      "A": "14",
+      "B": "20",
+      "C": "16",
+      "D": "12"
+    },
+    "answer_key": "A",
+    "explanation": "Multiplication is done before addition, so 4 x 2 = 8, then 6 + 8 = 14.",
+    "common_misconception": "Students may add 6 + 4 first and then multiply by 2.",
+    "tags": ["arithmetic", "order-of-operations"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-SAMPLE-002",
+    "subject": "Mathematics",
+    "topic": "Fractions",
+    "subtopic": "Equivalent Fractions",
+    "difficulty": "easy",
+    "cognitive_level": "understanding",
+    "question": "Which fraction is equivalent to 1/2?",
+    "options": {
+      "A": "2/3",
+      "B": "2/4",
+      "C": "3/5",
+      "D": "4/6"
+    },
+    "answer_key": "B",
+    "explanation": "The fraction 2/4 can be simplified by dividing the numerator and denominator by 2, giving 1/2.",
+    "common_misconception": "Students may choose a fraction with larger numbers without checking equivalence.",
+    "tags": ["fractions", "equivalent-fractions"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-SAMPLE-003",
+    "subject": "Mathematics",
+    "topic": "Linear Functions",
+    "subtopic": "Function Evaluation",
+    "difficulty": "medium",
+    "cognitive_level": "application",
+    "question": "If f(x) = 3x - 2, what is f(5)?",
+    "options": {
+      "A": "10",
+      "B": "13",
+      "C": "15",
+      "D": "17"
+    },
+    "answer_key": "B",
+    "explanation": "Substitute x = 5 into f(x) = 3x - 2. This gives 3(5) - 2 = 15 - 2 = 13.",
+    "common_misconception": "Students may forget to subtract 2 after multiplying.",
+    "tags": ["functions", "linear-functions", "substitution"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-SAMPLE-004",
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "subtopic": "Rectangle Area",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "A rectangle has length 8 cm and width 3 cm. What is its area?",
+    "options": {
+      "A": "11 cm^2",
+      "B": "22 cm^2",
+      "C": "24 cm^2",
+      "D": "48 cm^2"
+    },
+    "answer_key": "C",
+    "explanation": "The area of a rectangle is length x width, so 8 x 3 = 24 cm^2.",
+    "common_misconception": "Students may add the length and width instead of multiplying them.",
+    "tags": ["geometry", "rectangle", "area"],
+    "image_url": null
+  },
+  {
+    "id": "MTK-SAMPLE-005",
+    "subject": "Mathematics",
+    "topic": "Data Interpretation",
+    "subtopic": "Mean",
+    "difficulty": "medium",
+    "cognitive_level": "analysis",
+    "question": "The scores 6, 8, and 10 have what mean value?",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "9",
+      "D": "10"
+    },
+    "answer_key": "B",
+    "explanation": "Add the values 6 + 8 + 10 = 24, then divide by 3. The mean is 8.",
+    "common_misconception": "Students may choose the largest value instead of calculating the average.",
+    "tags": ["data", "mean", "statistics"],
+    "image_url": null
+  }
+]
