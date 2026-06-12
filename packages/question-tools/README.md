@@ -102,6 +102,12 @@ Or from the repository root:
 npm test
 ```
 
+## Dataset contribution guide
+
+If you want to contribute question datasets, read:
+
+- [`../../docs/dataset-contribution-guide.md`](../../docs/dataset-contribution-guide.md)
+
 ## Roadmap
 
 Planned features:

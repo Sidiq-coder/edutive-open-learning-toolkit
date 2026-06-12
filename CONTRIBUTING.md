@@ -39,6 +39,14 @@ When contributing sample questions, please make sure that:
 4. the topic and difficulty are provided,
 5. and the question follows the current dataset format.
 
+## Contributing question datasets
+
+If you want to add or improve question datasets, read the Dataset Contribution Guide first:
+
+- [`docs/dataset-contribution-guide.md`](docs/dataset-contribution-guide.md)
+
+The guide explains required fields, optional fields, difficulty levels, cognitive levels, tags, validation commands, and the dataset pull request checklist.
+
 ## Development workflow
 
 Recommended workflow:
