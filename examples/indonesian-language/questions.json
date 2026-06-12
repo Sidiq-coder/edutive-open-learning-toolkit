@@ -1,0 +1,102 @@
+[
+  {
+    "id": "IND-SAMPLE-001",
+    "subject": "Indonesian Language",
+    "topic": "Main Idea",
+    "subtopic": "Short Paragraph",
+    "difficulty": "easy",
+    "cognitive_level": "understanding",
+    "question": "Bacalah kalimat berikut: 'Dina rajin membaca buku setiap sore untuk menambah pengetahuan.' Gagasan utama kalimat tersebut adalah...",
+    "options": {
+      "A": "Dina bermain setiap sore",
+      "B": "Dina rajin membaca buku",
+      "C": "Dina membeli buku baru",
+      "D": "Dina menulis cerita"
+    },
+    "answer_key": "B",
+    "explanation": "Kalimat tersebut berfokus pada kebiasaan Dina yang rajin membaca buku.",
+    "common_misconception": "Siswa dapat terkecoh pada keterangan waktu dan menganggap 'setiap sore' sebagai gagasan utama.",
+    "tags": ["main-idea", "reading-comprehension", "indonesian-language"],
+    "image_url": null
+  },
+  {
+    "id": "IND-SAMPLE-002",
+    "subject": "Indonesian Language",
+    "topic": "Synonym",
+    "subtopic": "Word Meaning",
+    "difficulty": "easy",
+    "cognitive_level": "recall",
+    "question": "Sinonim dari kata 'cepat' adalah...",
+    "options": {
+      "A": "Lambat",
+      "B": "Lekas",
+      "C": "Diam",
+      "D": "Jauh"
+    },
+    "answer_key": "B",
+    "explanation": "Kata 'lekas' memiliki makna yang mirip dengan 'cepat'.",
+    "common_misconception": "Siswa dapat memilih antonim karena belum membedakan sinonim dan lawan kata.",
+    "tags": ["synonym", "vocabulary", "word-meaning"],
+    "image_url": null
+  },
+  {
+    "id": "IND-SAMPLE-003",
+    "subject": "Indonesian Language",
+    "topic": "Sentence Structure",
+    "subtopic": "Effective Sentence",
+    "difficulty": "medium",
+    "cognitive_level": "understanding",
+    "question": "Kalimat yang paling efektif adalah...",
+    "options": {
+      "A": "Para siswa-siswa sedang belajar",
+      "B": "Siswa sedang belajar",
+      "C": "Siswa-siswa para sedang belajar",
+      "D": "Sedang belajar para siswa-siswa"
+    },
+    "answer_key": "B",
+    "explanation": "Kalimat 'Siswa sedang belajar' jelas, singkat, dan tidak menggunakan pengulangan makna.",
+    "common_misconception": "Siswa dapat mengira pengulangan kata membuat kalimat lebih lengkap.",
+    "tags": ["sentence-structure", "effective-sentence"],
+    "image_url": null
+  },
+  {
+    "id": "IND-SAMPLE-004",
+    "subject": "Indonesian Language",
+    "topic": "Reading Comprehension",
+    "subtopic": "Cause and Effect",
+    "difficulty": "medium",
+    "cognitive_level": "analysis",
+    "question": "Rani lupa membawa payung saat hujan deras. Akibat yang paling mungkin terjadi adalah...",
+    "options": {
+      "A": "Rani menjadi basah",
+      "B": "Rani membeli buku",
+      "C": "Rani tidur lebih awal",
+      "D": "Rani menonton televisi"
+    },
+    "answer_key": "A",
+    "explanation": "Jika seseorang tidak membawa payung saat hujan deras, akibat yang paling masuk akal adalah menjadi basah.",
+    "common_misconception": "Siswa dapat memilih jawaban yang tidak berhubungan karena tidak memperhatikan hubungan sebab-akibat.",
+    "tags": ["reading-comprehension", "cause-effect"],
+    "image_url": null
+  },
+  {
+    "id": "IND-SAMPLE-005",
+    "subject": "Indonesian Language",
+    "topic": "Formal Language",
+    "subtopic": "Polite Expression",
+    "difficulty": "easy",
+    "cognitive_level": "application",
+    "question": "Kalimat yang paling tepat digunakan dalam situasi resmi adalah...",
+    "options": {
+      "A": "Aku nggak bisa datang ya",
+      "B": "Saya tidak dapat hadir",
+      "C": "Gue telat nih",
+      "D": "Nanti aku kabarin deh"
+    },
+    "answer_key": "B",
+    "explanation": "Kalimat 'Saya tidak dapat hadir' menggunakan ragam bahasa yang lebih formal dan sopan.",
+    "common_misconception": "Siswa dapat menggunakan bahasa sehari-hari dalam konteks resmi.",
+    "tags": ["formal-language", "polite-expression"],
+    "image_url": null
+  }
+]
