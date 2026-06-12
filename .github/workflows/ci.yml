@@ -45,5 +45,8 @@ jobs:
       - name: Validate sample CSV dataset
         run: npm run validate:sample:csv
 
+      - name: Validate all example datasets
+        run: npm run validate:examples
+
       - name: Convert sample CSV dataset to JSON
         run: npm run convert:sample
