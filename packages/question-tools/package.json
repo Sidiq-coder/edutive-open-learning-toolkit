@@ -16,6 +16,7 @@
     "validate:sample": "tsx src/cli.ts validate ../../examples/sample-questions.json",
     "validate:sample:json": "tsx src/cli.ts validate ../../examples/sample-questions.json",
     "validate:sample:csv": "tsx src/cli.ts validate ../../examples/sample-questions.csv",
+    "validate:examples": "tsx src/cli.ts validate ../../examples/sample-questions.json && tsx src/cli.ts validate ../../examples/sample-questions.csv && tsx src/cli.ts validate ../../examples/mathematics/questions.json && tsx src/cli.ts validate ../../examples/mathematics/questions.csv && tsx src/cli.ts validate ../../examples/science/questions.json && tsx src/cli.ts validate ../../examples/science/questions.csv && tsx src/cli.ts validate ../../examples/indonesian-language/questions.json && tsx src/cli.ts validate ../../examples/indonesian-language/questions.csv && tsx src/cli.ts validate ../../examples/english/questions.json && tsx src/cli.ts validate ../../examples/english/questions.csv",
     "convert:sample": "tsx src/cli.ts convert ../../examples/sample-questions.csv --out ../../examples/sample-questions.generated.json"
   },
   "devDependencies": {
