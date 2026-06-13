@@ -30,13 +30,6 @@ Planned work:
 - Add unit tests for validation rules.
 - Prepare basic CLI usage.
 
-Example target commands:
-
-```bash
-npx edutive-question-tools validate examples/sample-questions.csv
-npx edutive-question-tools convert examples/sample-questions.csv --out questions.json
-```
-
 ## v0.3.0 - Contributor Ready Dataset Tools
 
 Focus: make it easy for other people to contribute datasets and documentation.
@@ -50,25 +43,21 @@ Planned work:
 - Add examples for image-based questions.
 - Add good first issues.
 
-## v0.4.0 - Diagnostic Engine
+## v0.4.0 - Learning Analysis Engine
 
-Focus: analyze student results and identify learning gaps.
+Focus: define practice result data and add simple topic-level summaries.
 
 Planned work:
 
-- Define student answer result schema.
-- Calculate topic mastery.
-- Identify weak topics.
-- Map wrong answers to common misconceptions.
-- Generate student diagnosis output.
-- Add sample data for 32 students.
+- Define practice result format.
+- Add practice result examples.
+- Add topic summary utility.
+- Add tests for topic summary.
+- Document learning analysis usage.
 
-Initial methods:
+Related docs:
 
-- rule-based diagnosis,
-- weighted scoring,
-- topic-level mastery calculation,
-- simple risk level classification.
+- [`practice-result-format.md`](practice-result-format.md)
 
 ## v0.5.0 - Decision Support Methods
 
@@ -76,7 +65,7 @@ Focus: support teacher decision-making using simple decision support methods.
 
 Planned work:
 
-- Add SAW method for ranking students who need support.
+- Add SAW method for prioritization examples.
 - Add TOPSIS method for comparison.
 - Add Weighted Product method for comparison.
 - Add documentation explaining each method.
@@ -84,11 +73,11 @@ Planned work:
 
 ## v0.6.0 - Recommendation Engine
 
-Focus: recommend learning actions based on diagnosis results.
+Focus: recommend learning actions based on analysis results.
 
 Planned work:
 
-- Recommend remedial topics.
+- Recommend review topics.
 - Suggest practice difficulty levels.
 - Support prerequisite topic mapping.
 - Generate learning recommendations.
@@ -96,15 +85,15 @@ Planned work:
 
 ## v0.7.0 - Teacher Insight Dashboard
 
-Focus: create a visual demo that shows how the toolkit can be used in real classroom workflows.
+Focus: create a visual demo that shows how the toolkit can be used in learning workflows.
 
 Planned work:
 
 - Create teacher dashboard app.
 - Show class overview.
-- Show student risk level.
-- Visualize weak topics.
-- Group students by learning needs.
+- Show topic summary.
+- Visualize topics that need review.
+- Group practice records by learning needs.
 - Add import sample dataset feature.
 
 ## v0.8.0 - NPM Packages and CLI
@@ -132,8 +121,8 @@ Focus: stabilize the data standard and make it reliable for other projects.
 Planned work:
 
 - Stable question schema.
-- Stable student result schema.
-- Stable diagnostic output schema.
+- Stable practice result schema.
+- Stable analysis output schema.
 - Full documentation.
 - Migration guide from earlier versions.
 - More complete examples and tests.
@@ -143,7 +132,7 @@ Planned work:
 These are not immediate priorities, but may be explored later:
 
 - machine learning experiments for learning analytics,
-- clustering students by learning behavior,
+- clustering practice behavior,
 - NLP-based explanation analysis,
 - LLM-assisted question generation,
 - offline-first learning workflows,
@@ -159,5 +148,5 @@ The project should prioritize:
 2. simple tools that work reliably,
 3. documentation that beginners can understand,
 4. contributor-friendly issues,
-5. ethical use of student data,
+5. safe and ethical learning data examples,
 6. and open source sustainability.
