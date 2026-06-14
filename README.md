@@ -115,6 +115,7 @@ Useful documents:
 
 - [`docs/roadmap.md`](docs/roadmap.md) — project roadmap
 - [`docs/dataset-format.md`](docs/dataset-format.md) — dataset format
+- [`docs/learning-analysis.md`](docs/learning-analysis.md) — learning analysis usage
 - [`docs/dataset-contribution-guide.md`](docs/dataset-contribution-guide.md) — dataset contribution guide
 - [`docs/image-based-questions.md`](docs/image-based-questions.md) — image-based question guide
 - [`docs/good-first-issues.md`](docs/good-first-issues.md) — beginner-friendly contribution guide
@@ -139,7 +140,7 @@ npm run convert:sample
 1. Foundation
 2. Question Tools MVP
 3. Contributor Ready Dataset Tools
-4. Diagnostic Engine
+4. Learning Analysis Engine
 5. Recommendation Engine
 6. Teacher Insight Dashboard
 
