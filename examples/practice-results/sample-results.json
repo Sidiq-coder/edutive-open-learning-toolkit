@@ -1,0 +1,112 @@
+[
+  {
+    "participant_id": "P001",
+    "question_id": "MTK-SAMPLE-001",
+    "selected_answer": "A",
+    "is_correct": true,
+    "answered_at": "2026-06-12T09:00:00Z",
+    "time_spent_seconds": 35,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-001",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P001",
+    "question_id": "MTK-SAMPLE-002",
+    "selected_answer": "A",
+    "is_correct": false,
+    "answered_at": "2026-06-12T09:01:00Z",
+    "time_spent_seconds": 42,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-001",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P001",
+    "question_id": "MTK-SAMPLE-003",
+    "selected_answer": "B",
+    "is_correct": true,
+    "answered_at": "2026-06-12T09:02:00Z",
+    "time_spent_seconds": 51,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-001",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P001",
+    "question_id": "SCI-SAMPLE-001",
+    "selected_answer": "A",
+    "is_correct": true,
+    "answered_at": "2026-06-12T09:03:00Z",
+    "time_spent_seconds": 28,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-001",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P001",
+    "question_id": "SCI-SAMPLE-002",
+    "selected_answer": "B",
+    "is_correct": false,
+    "answered_at": "2026-06-12T09:04:00Z",
+    "time_spent_seconds": 36,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-001",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P002",
+    "question_id": "IND-SAMPLE-001",
+    "selected_answer": "B",
+    "is_correct": true,
+    "answered_at": "2026-06-12T10:00:00Z",
+    "time_spent_seconds": 44,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-002",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P002",
+    "question_id": "IND-SAMPLE-002",
+    "selected_answer": "B",
+    "is_correct": true,
+    "answered_at": "2026-06-12T10:01:00Z",
+    "time_spent_seconds": 31,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-002",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P002",
+    "question_id": "ENG-SAMPLE-001",
+    "selected_answer": "C",
+    "is_correct": true,
+    "answered_at": "2026-06-12T10:02:00Z",
+    "time_spent_seconds": 26,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-002",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P002",
+    "question_id": "ENG-SAMPLE-002",
+    "selected_answer": "A",
+    "is_correct": false,
+    "answered_at": "2026-06-12T10:03:00Z",
+    "time_spent_seconds": 39,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-002",
+    "source": "practice"
+  },
+  {
+    "participant_id": "P002",
+    "question_id": "ENG-SAMPLE-003",
+    "selected_answer": "A",
+    "is_correct": true,
+    "answered_at": "2026-06-12T10:04:00Z",
+    "time_spent_seconds": 46,
+    "attempt_number": 1,
+    "session_id": "SESSION-DEMO-002",
+    "source": "practice"
+  }
+]
