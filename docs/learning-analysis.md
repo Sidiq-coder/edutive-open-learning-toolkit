@@ -26,6 +26,18 @@ Read these first:
 - [`dataset-format.md`](dataset-format.md)
 - [`practice-result-format.md`](practice-result-format.md)
 
+## Bundled practice result example
+
+A fictional practice result example is available at:
+
+```text
+examples/practice-results/sample-results.json
+```
+
+The file uses fictional participant identifiers and references existing question IDs from the bundled example datasets.
+
+Use it as sample input when testing topic summary behavior.
+
 ## Input 1: question dataset
 
 The topic summary utility needs question metadata.
