@@ -1,0 +1,22 @@
+[
+  {
+    "key": "review_need_score",
+    "weight": 0.4,
+    "type": "benefit"
+  },
+  {
+    "key": "topic_score_average",
+    "weight": 0.3,
+    "type": "cost"
+  },
+  {
+    "key": "completion_rate",
+    "weight": 0.2,
+    "type": "benefit"
+  },
+  {
+    "key": "time_spent_total_seconds",
+    "weight": 0.1,
+    "type": "benefit"
+  }
+]
