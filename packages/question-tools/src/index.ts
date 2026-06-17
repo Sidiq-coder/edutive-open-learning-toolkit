@@ -1,8 +1,16 @@
 export { convertCsvToJson } from "./converter.js";
 export { parseQuestionCsv } from "./csv.js";
+export { rankWithSaw } from "./saw-ranking.js";
 export { createTopicSummary } from "./topic-summary.js";
 export { validateQuestionDataset } from "./validator.js";
 export type { ConvertCsvToJsonOptions, ConvertCsvToJsonResult } from "./converter.js";
+export type {
+  SawCriterion,
+  SawCriterionType,
+  SawRankedRecord,
+  SawRankingResult,
+  SawRecord
+} from "./saw-ranking.js";
 export type {
   CreateTopicSummaryOptions,
   PracticeResultRecord,
