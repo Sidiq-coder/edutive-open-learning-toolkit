@@ -1,0 +1,35 @@
+[
+  {
+    "id": "P001",
+    "label": "Participant 1",
+    "values": {
+      "topic_score_average": 60,
+      "completion_rate": 90,
+      "attempt_count": 2,
+      "time_spent_total_seconds": 400,
+      "review_need_score": 80
+    }
+  },
+  {
+    "id": "P002",
+    "label": "Participant 2",
+    "values": {
+      "topic_score_average": 80,
+      "completion_rate": 70,
+      "attempt_count": 1,
+      "time_spent_total_seconds": 300,
+      "review_need_score": 50
+    }
+  },
+  {
+    "id": "P003",
+    "label": "Participant 3",
+    "values": {
+      "topic_score_average": 70,
+      "completion_rate": 80,
+      "attempt_count": 3,
+      "time_spent_total_seconds": 200,
+      "review_need_score": 65
+    }
+  }
+]
