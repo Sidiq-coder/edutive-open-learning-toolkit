@@ -1,5 +1,54 @@
 # Changelog
 
+## v0.5.0 - Decision Support Methods
+
+This release introduces the first transparent decision support utility for Edutive Open Learning Toolkit.
+
+### Added
+
+- Decision support input format documentation.
+- SAW ranking utility.
+- Decision support example records.
+- Decision support criteria examples.
+- Tests for SAW ranking behavior.
+- Decision support usage documentation.
+
+### Decision support features
+
+- Benefit criteria support.
+- Cost criteria support.
+- Value normalization.
+- Weighted scoring.
+- Ranked output sorted by final score.
+- Stable tie breaker by record ID.
+
+### New files
+
+- `docs/decision-support-input-format.md`
+- `docs/decision-support.md`
+- `examples/decision-support/sample-records.json`
+- `examples/decision-support/sample-criteria.json`
+- `examples/decision-support/README.md`
+- `packages/question-tools/src/saw-ranking.ts`
+- `packages/question-tools/src/saw-ranking.test.ts`
+
+### Updated files
+
+- `packages/question-tools/src/index.ts`
+- `CHANGELOG.md`
+
+### Recommended checks
+
+```bash
+npm run check
+npm test
+npm run validate:examples
+```
+
+### Notes
+
+This release adds a baseline ranking method. It is intended as a transparent helper and should not replace educator judgment.
+
 ## v0.4.0 - Learning Analysis Engine
 
 This release introduces the first learning analysis utilities for Edutive Open Learning Toolkit.
