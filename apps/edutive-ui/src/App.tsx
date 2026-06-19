@@ -1,6 +1,7 @@
+import { useMemo, useState } from "react";
 import { DatasetPreview } from "./components/DatasetPreview";
 import { FeatureCard } from "./components/FeatureCard";
-import { GenerateForm } from "./components/GenerateForm";
+import { GenerateForm, type GenerateFormState } from "./components/GenerateForm";
 import { Navbar } from "./components/layout/Navbar";
 import { QuestionPreview } from "./components/QuestionPreview";
 import { ButtonLink } from "./components/ui/Button";
@@ -10,7 +11,29 @@ import { Workflow } from "./components/Workflow";
 import { featureItems, navigationItems, workflowSteps } from "./data/navigation";
 import { generatedQuestionPreview } from "./data/questionPreview";
 
+const initialRequest: GenerateFormState = {
+  subject: "Mathematics",
+  topic: "Fungsi Linear",
+  count: "5",
+  difficulty: "medium",
+  cognitiveLevel: "application",
+  notes: "Buat soal pilihan ganda lengkap dengan jawaban dan pembahasan."
+};
+
 export function App() {
+  const [request, setRequest] = useState<GenerateFormState>(initialRequest);
+
+  const livePreview = useMemo(
+    () => ({
+      ...generatedQuestionPreview,
+      subject: request.subject,
+      topic: request.topic,
+      difficulty: request.difficulty,
+      cognitiveLevel: request.cognitiveLevel
+    }),
+    [request]
+  );
+
   return (
     <div className="app-shell" id="top">
       <Navbar items={navigationItems} />
@@ -31,7 +54,7 @@ export function App() {
           </div>
 
           <Card className="hero-section__preview">
-            <QuestionPreview preview={generatedQuestionPreview} />
+            <QuestionPreview preview={livePreview} />
           </Card>
         </section>
 
@@ -49,9 +72,9 @@ export function App() {
         </section>
 
         <section className="page-section generate-layout" id="generate">
-          <GenerateForm />
+          <GenerateForm value={request} onChange={setRequest} />
           <div className="generate-layout__right">
-            <QuestionPreview preview={generatedQuestionPreview} />
+            <QuestionPreview preview={livePreview} />
             <DatasetPreview />
           </div>
         </section>
