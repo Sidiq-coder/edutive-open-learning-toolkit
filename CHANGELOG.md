@@ -1,5 +1,35 @@
 # Changelog
 
+## v0.7.0 - Generate Soal Workflow
+
+This release improves the product direction around Generate Soal and adds a landing page preview for the whole project.
+
+### Added
+
+- Generate question request format documentation.
+- Question draft format documentation.
+- Question prompt templates.
+- Generate Soal workflow documentation.
+- Improved Generate Soal static preview.
+- Project landing page static preview.
+
+### Generate Soal workflow
+
+- Request format for subject, topic, difficulty, cognitive level, count, language, style, and additional instructions.
+- Draft format before questions are approved into the dataset.
+- Review status values for draft workflow.
+- Prompt templates for structured multiple-choice questions.
+- Workflow documentation from request to dataset-ready output.
+
+### UI previews
+
+- `apps/generate-soal-preview/` for focused Generate Soal interface.
+- `apps/project-landing/` for overall project introduction and feature navigation.
+
+### Notes
+
+The UI previews are static and dependency-free. They are visual references for future app development.
+
 ## v0.6.0 - Recommendation Engine
 
 This release introduces the first recommendation utility and an early Generate Soal UI preview.
