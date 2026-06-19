@@ -1,7 +1,29 @@
+import type { ChangeEvent } from "react";
 import { Button } from "./ui/Button";
 import { Card } from "./ui/Card";
 
-export function GenerateForm() {
+export interface GenerateFormState {
+  subject: string;
+  topic: string;
+  count: string;
+  difficulty: "easy" | "medium" | "hard";
+  cognitiveLevel: string;
+  notes: string;
+}
+
+interface GenerateFormProps {
+  value: GenerateFormState;
+  onChange: (value: GenerateFormState) => void;
+}
+
+export function GenerateForm({ value, onChange }: GenerateFormProps) {
+  function updateField(event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
+    onChange({
+      ...value,
+      [event.target.name]: event.target.value
+    });
+  }
+
   return (
     <Card className="generate-form">
       <span className="eyebrow">Generate Soal</span>
@@ -11,7 +33,7 @@ export function GenerateForm() {
       <form className="form-grid">
         <label>
           Subject
-          <select defaultValue="Mathematics">
+          <select name="subject" value={value.subject} onChange={updateField}>
             <option>Mathematics</option>
             <option>Science</option>
             <option>Indonesian Language</option>
@@ -22,18 +44,18 @@ export function GenerateForm() {
         <div className="form-row">
           <label>
             Topic
-            <input defaultValue="Fungsi Linear" />
+            <input name="topic" value={value.topic} onChange={updateField} />
           </label>
           <label>
             Count
-            <input defaultValue="5" inputMode="numeric" />
+            <input name="count" value={value.count} onChange={updateField} inputMode="numeric" />
           </label>
         </div>
 
         <div className="form-row">
           <label>
             Difficulty
-            <select defaultValue="medium">
+            <select name="difficulty" value={value.difficulty} onChange={updateField}>
               <option>easy</option>
               <option>medium</option>
               <option>hard</option>
@@ -41,7 +63,7 @@ export function GenerateForm() {
           </label>
           <label>
             Cognitive Level
-            <select defaultValue="application">
+            <select name="cognitiveLevel" value={value.cognitiveLevel} onChange={updateField}>
               <option>recall</option>
               <option>understanding</option>
               <option>application</option>
@@ -52,7 +74,7 @@ export function GenerateForm() {
 
         <label>
           Notes
-          <textarea defaultValue="Buat soal pilihan ganda lengkap dengan jawaban dan pembahasan." />
+          <textarea name="notes" value={value.notes} onChange={updateField} />
         </label>
 
         <div className="button-row">
