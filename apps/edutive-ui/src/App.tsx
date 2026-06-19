@@ -75,7 +75,7 @@ export function App() {
           <GenerateForm value={request} onChange={setRequest} />
           <div className="generate-layout__right">
             <QuestionPreview preview={livePreview} />
-            <DatasetPreview />
+            <DatasetPreview preview={livePreview} />
           </div>
         </section>
 
