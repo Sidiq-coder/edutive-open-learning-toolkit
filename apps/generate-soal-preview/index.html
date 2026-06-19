@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edutive Generate Soal Preview</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-soft: #1f2937;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --primary: #38bdf8;
+        --primary-soft: rgba(56, 189, 248, 0.14);
+        --border: rgba(148, 163, 184, 0.24);
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32%), var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+      }
+
+      .sidebar {
+        border-right: 1px solid var(--border);
+        background: rgba(15, 23, 42, 0.82);
+        padding: 24px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #38bdf8, #6366f1);
+        font-weight: 800;
+        color: white;
+      }
+
+      .brand strong {
+        display: block;
+        font-size: 16px;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .nav {
+        display: grid;
+        gap: 8px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--muted);
+        padding: 11px 12px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        font-size: 14px;
+      }
+
+      .nav a.active,
+      .nav a:hover {
+        background: var(--primary-soft);
+        border-color: rgba(56, 189, 248, 0.24);
+        color: var(--text);
+      }
+
+      .main {
+        padding: 28px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+      }
+
+      .eyebrow {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 8px 0 8px;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.05;
+      }
+
+      .lead {
+        color: var(--muted);
+        margin: 0;
+        max-width: 760px;
+        line-height: 1.7;
+      }
+
+      .status-pill {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: var(--muted);
+        background: rgba(15, 23, 42, 0.7);
+        font-size: 13px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+        gap: 20px;
+        align-items: start;
+      }
+
+      .card {
+        background: rgba(17, 24, 39, 0.82);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 20px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+      }
+
+      .card h2 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        background: #0b1120;
+        color: var(--text);
+        border-radius: 14px;
+        padding: 12px 13px;
+        font: inherit;
+        outline: none;
+      }
+
+      textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: rgba(56, 189, 248, 0.7);
+        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.08);
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .button {
+        border: 0;
+        border-radius: 14px;
+        padding: 13px 16px;
+        background: linear-gradient(135deg, #38bdf8, #6366f1);
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--border);
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 6px;
+      }
+
+      .preview-stack {
+        display: grid;
+        gap: 16px;
+      }
+
+      .question-card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 16px;
+        background: rgba(15, 23, 42, 0.72);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .tag {
+        color: var(--primary);
+        background: var(--primary-soft);
+        border: 1px solid rgba(56, 189, 248, 0.18);
+        border-radius: 999px;
+        padding: 5px 9px;
+        font-size: 12px;
+      }
+
+      .question {
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 0 0 14px;
+      }
+
+      .options {
+        display: grid;
+        gap: 8px;
+      }
+
+      .option {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px;
+        color: var(--muted);
+      }
+
+      .option.correct {
+        border-color: rgba(34, 197, 94, 0.5);
+        color: var(--text);
+        background: rgba(34, 197, 94, 0.08);
+      }
+
+      .badge {
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        background: var(--panel-soft);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 800;
+        flex: 0 0 auto;
+      }
+
+      .insight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .insight {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 14px;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .insight span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .insight strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .explain {
+        display: grid;
+        gap: 10px;
+      }
+
+      .note {
+        border-left: 3px solid var(--primary);
+        background: rgba(56, 189, 248, 0.08);
+        padding: 12px;
+        border-radius: 12px;
+        color: var(--muted);
+      }
+
+      .pipeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .step {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 12px;
+        background: rgba(15, 23, 42, 0.72);
+      }
+
+      .step strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .step span {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 980px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: relative;
+          height: auto;
+        }
+
+        .grid,
+        .insight-grid,
+        .pipeline {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar,
+        .row {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">E</div>
+          <div>
+            <strong>Edutive AI</strong>
+            <span>Generate Soal Preview</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="active" href="#generate">Generate Soal</a>
+          <a href="#review">Review Output</a>
+          <a href="#dataset">Dataset Ready</a>
+          <a href="#analysis">Insight Guru</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <section class="topbar">
+          <div>
+            <div class="eyebrow">Prototype UI</div>
+            <h1>Generate soal terstruktur untuk bank soal Edutive.</h1>
+            <p class="lead">
+              Tampilan awal ini memvisualisasikan alur generate soal: input kebutuhan, hasil soal pilihan ganda, pembahasan, miskonsepsi umum, metadata dataset, dan kesiapan validasi.
+            </p>
+          </div>
+          <div class="status-pill">Static Preview • v0.6.0</div>
+        </section>
+
+        <section class="grid" id="generate">
+          <div class="card">
+            <h2>Konfigurasi Generate</h2>
+            <p>Atur kebutuhan soal yang ingin dibuat. Nanti bagian ini bisa terhubung ke model LLM, validator dataset, dan sistem review.</p>
+            <div class="form-grid">
+              <label>
+                Mata Pelajaran
+                <select>
+                  <option>Mathematics</option>
+                  <option>Science</option>
+                  <option>Indonesian Language</option>
+                  <option>English</option>
+                </select>
+              </label>
+              <div class="row">
+                <label>
+                  Topik
+                  <input value="Fungsi Linear" />
+                </label>
+                <label>
+                  Jumlah Soal
+                  <input value="5" />
+                </label>
+              </div>
+              <div class="row">
+                <label>
+                  Kesulitan
+                  <select>
+                    <option>medium</option>
+                    <option>easy</option>
+                    <option>hard</option>
+                  </select>
+                </label>
+                <label>
+                  Level Kognitif
+                  <select>
+                    <option>application</option>
+                    <option>understanding</option>
+                    <option>analysis</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Arahan tambahan
+                <textarea>Generate soal pilihan ganda SNBT-style, lengkap dengan jawaban, pembahasan, dan miskonsepsi umum.</textarea>
+              </label>
+              <div class="actions">
+                <button class="button">Generate Soal</button>
+                <button class="button secondary">Import Referensi</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-stack" id="review">
+            <div class="card question-card">
+              <div class="meta">
+                <span class="tag">Mathematics</span>
+                <span class="tag">Fungsi Linear</span>
+                <span class="tag">medium</span>
+                <span class="tag">application</span>
+              </div>
+              <p class="question">Jika f(x) = 2x + 3, nilai f(4) adalah...</p>
+              <div class="options">
+                <div class="option"><span class="badge">A</span><span>8</span></div>
+                <div class="option"><span class="badge">B</span><span>9</span></div>
+                <div class="option"><span class="badge">C</span><span>10</span></div>
+                <div class="option correct"><span class="badge">D</span><span>11</span></div>
+              </div>
+            </div>
+
+            <div class="card explain">
+              <h2>Breakdown Jawaban</h2>
+              <div class="note"><strong>Answer Key:</strong> D</div>
+              <div class="note"><strong>Pembahasan:</strong> Substitusi x = 4 ke f(x) = 2x + 3, sehingga f(4) = 2(4) + 3 = 11.</div>
+              <div class="note"><strong>Common Misconception:</strong> Siswa dapat lupa melakukan substitusi nilai x terlebih dahulu atau keliru pada urutan operasi.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="dataset" style="margin-top: 20px;">
+          <h2>Dataset Ready Output</h2>
+          <p>Setiap soal yang lolos review diarahkan menjadi format dataset Edutive: id, subject, topic, difficulty, cognitive_level, options, answer_key, explanation, common_misconception, tags, dan image_url.</p>
+          <div class="insight-grid">
+            <div class="insight"><span>Validasi Format</span><strong>JSON / CSV Ready</strong></div>
+            <div class="insight"><span>Metadata</span><strong>Topic + Difficulty</strong></div>
+            <div class="insight"><span>Review</span><strong>Answer + Reasoning</strong></div>
+          </div>
+        </section>
+
+        <section class="card" id="analysis" style="margin-top: 20px;">
+          <h2>Alur Sistem Berikutnya</h2>
+          <div class="pipeline">
+            <div class="step"><strong>1. Generate</strong><span>Buat soal berdasarkan topik, tingkat kesulitan, dan gaya ujian.</span></div>
+            <div class="step"><strong>2. Review</strong><span>Cek jawaban, pembahasan, dan miskonsepsi umum sebelum masuk bank soal.</span></div>
+            <div class="step"><strong>3. Validate</strong><span>Pastikan format sesuai standar dataset Edutive.</span></div>
+            <div class="step"><strong>4. Analyze</strong><span>Gunakan hasil latihan untuk topic summary, decision support, dan rekomendasi.</span></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
