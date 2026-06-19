@@ -1,0 +1,32 @@
+{
+  "participant_id": "P001",
+  "weak_topics": [
+    "Arithmetic"
+  ],
+  "strong_topics": [
+    "Geometry"
+  ],
+  "recommendations": [
+    {
+      "topic": "Arithmetic",
+      "percentage": 40,
+      "priority": "high",
+      "recommended_difficulty": "easy",
+      "action": "Review Arithmetic from the basics and practice easy questions."
+    },
+    {
+      "topic": "Fractions",
+      "percentage": 70,
+      "priority": "medium",
+      "recommended_difficulty": "medium",
+      "action": "Strengthen Fractions with guided medium practice."
+    },
+    {
+      "topic": "Geometry",
+      "percentage": 90,
+      "priority": "low",
+      "recommended_difficulty": "hard",
+      "action": "Maintain Geometry mastery with hard enrichment practice."
+    }
+  ]
+}
