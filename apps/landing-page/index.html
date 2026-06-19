@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edutive Open Learning Toolkit</title>
+    <style>
+      :root{--bg:#07111f;--panel:#0f172a;--soft:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:rgba(148,163,184,.22);--blue:#38bdf8;--violet:#818cf8;--green:#22c55e;--yellow:#f59e0b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(56,189,248,.18),transparent 30%),radial-gradient(circle at top right,rgba(129,140,248,.16),transparent 28%),var(--bg);color:var(--text)}a{color:inherit}.nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(7,17,31,.72);border-bottom:1px solid var(--line)}.nav-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}.brand{display:flex;gap:10px;align-items:center;font-weight:900}.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--violet));display:grid;place-items:center}.menu{display:flex;gap:8px;flex-wrap:wrap}.menu a{text-decoration:none;color:var(--muted);font-size:13px;padding:9px 10px;border-radius:999px}.menu a:hover{background:rgba(56,189,248,.12);color:var(--text)}.wrap{max-width:1180px;margin:auto;padding:0 20px}.hero{padding:76px 20px 46px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:900}.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.02;margin:12px 0}.lead{color:var(--muted);font-size:18px;line-height:1.7;max-width:760px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border-radius:14px;padding:13px 16px;text-decoration:none;font-weight:900;background:linear-gradient(135deg,var(--blue),var(--violet));color:white}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}.hero-card{background:rgba(15,23,42,.82);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 30px 90px rgba(0,0,0,.28)}.preview{border:1px solid var(--line);border-radius:20px;background:#0b1120;padding:16px}.preview-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:14px}.pill{font-size:12px;border-radius:999px;padding:6px 9px;background:rgba(56,189,248,.12);color:var(--blue);border:1px solid rgba(56,189,248,.2)}.question{line-height:1.6}.option{border:1px solid var(--line);border-radius:12px;padding:9px;margin-top:8px;color:var(--muted)}.option.ok{border-color:rgba(34,197,94,.45);color:var(--text);background:rgba(34,197,94,.08)}section{padding:48px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}.section-head h2{font-size:32px;margin:0}.section-head p{color:var(--muted);max-width:620px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:rgba(15,23,42,.78);border:1px solid var(--line);border-radius:22px;padding:20px}.card h3{margin:0 0 8px}.card p{color:var(--muted);line-height:1.6}.card a{color:var(--blue);font-weight:800;text-decoration:none}.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{background:rgba(15,23,42,.78);border:1px solid var(--line);border-radius:18px;padding:16px}.step strong{display:block}.step span{display:block;color:var(--muted);font-size:13px;line-height:1.5;margin-top:8px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.code{white-space:pre-wrap;background:#0b1120;border:1px solid var(--line);border-radius:18px;padding:16px;color:#cbd5e1;line-height:1.6;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted)}@media(max-width:900px){.hero,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.menu{display:none}.section-head{display:block}}
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="brand"><div class="logo">E</div><span>Edutive Toolkit</span></div>
+        <div class="menu">
+          <a href="#generate">Generate Soal</a>
+          <a href="#tools">Question Tools</a>
+          <a href="#dataset">Dataset</a>
+          <a href="#analysis">Analysis</a>
+          <a href="#decision">Decision</a>
+          <a href="#recommendation">Recommendation</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero wrap">
+      <div>
+        <div class="eyebrow">Open Source EdTech Toolkit</div>
+        <h1>Fondasi terbuka untuk generate soal, dataset, analisis belajar, dan rekomendasi.</h1>
+        <p class="lead">Edutive Open Learning Toolkit adalah proyek open source untuk membangun alur pembelajaran adaptif secara bertahap: mulai dari bank soal terstruktur, validasi dataset, generate soal, analisis hasil latihan, decision support, hingga rekomendasi belajar.</p>
+        <div class="cta"><a class="btn" href="#generate">Lihat Fitur Generate Soal</a><a class="btn secondary" href="../generate-soal-preview/index.html">Buka Preview UI</a></div>
+      </div>
+      <div class="hero-card">
+        <div class="preview">
+          <div class="preview-top"><span class="pill">Generate Soal</span><span class="pill">Dataset Ready</span></div>
+          <div class="question">Jika f(x) = 2x + 3, nilai f(4) adalah...</div>
+          <div class="option">A. 8</div><div class="option">B. 9</div><div class="option">C. 10</div><div class="option ok">D. 11</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="generate">
+        <div class="section-head"><h2>Generate Soal</h2><p>Alur untuk membuat draft soal pilihan ganda lengkap dengan answer key, pembahasan, common misconception, dan metadata dataset.</p></div>
+        <div class="grid"><div class="card"><h3>Request Format</h3><p>Menentukan subject, topic, difficulty, cognitive level, jumlah soal, bahasa, dan instruksi tambahan.</p><a href="../../docs/generate-question-request-format.md">Baca dokumen</a></div><div class="card"><h3>Draft Review</h3><p>Soal masuk sebagai draft terlebih dahulu agar bisa dicek sebelum menjadi dataset final.</p><a href="../../docs/question-draft-format.md">Baca draft format</a></div><div class="card"><h3>Preview UI</h3><p>Tampilan awal untuk menggambarkan konfigurasi generate, review, validasi, dan export.</p><a href="../generate-soal-preview/index.html">Buka preview</a></div></div>
+      </section>
+
+      <section id="tools">
+        <div class="section-head"><h2>Question Tools</h2><p>Tools awal untuk memvalidasi dan mengonversi dataset soal agar siap dipakai pada workflow berikutnya.</p></div>
+        <div class="grid"><div class="card"><h3>JSON Validation</h3><p>Memastikan struktur soal sesuai format Edutive.</p></div><div class="card"><h3>CSV Validation</h3><p>Mendukung format yang lebih mudah diedit lewat spreadsheet.</p></div><div class="card"><h3>CSV to JSON</h3><p>Mengubah dataset CSV menjadi JSON terstruktur.</p></div></div>
+      </section>
+
+      <section id="dataset">
+        <div class="section-head"><h2>Dataset Standard</h2><p>Standar data berisi question, options, answer key, explanation, common misconception, tags, dan image_url.</p></div>
+        <div class="split"><div class="card"><h3>Kenapa penting?</h3><p>Sebelum AI, dashboard, dan rekomendasi bisa berjalan, data soal harus konsisten dan mudah dianalisis.</p><a href="../../docs/dataset-format.md">Baca dataset format</a></div><div class="code">{
+  "subject": "Mathematics",
+  "topic": "Linear Functions",
+  "answer_key": "D",
+  "explanation": "...",
+  "common_misconception": "..."
+}</div></div>
+      </section>
+
+      <section id="analysis">
+        <div class="section-head"><h2>Learning Analysis</h2><p>Mengubah hasil latihan menjadi ringkasan topik: total, benar, persentase, dan unmatched question id.</p></div>
+        <div class="grid"><div class="card"><h3>Practice Result</h3><p>Format hasil latihan peserta.</p><a href="../../docs/practice-result-format.md">Baca format</a></div><div class="card"><h3>Topic Summary</h3><p>Utility untuk meringkas hasil berdasarkan topik.</p><a href="../../docs/learning-analysis.md">Baca usage</a></div><div class="card"><h3>Examples</h3><p>Contoh hasil latihan fiktif untuk testing.</p></div></div>
+      </section>
+
+      <section id="decision">
+        <div class="section-head"><h2>Decision Support</h2><p>Baseline metode SPK dengan SAW untuk ranking berbasis kriteria benefit dan cost.</p></div>
+        <div class="grid"><div class="card"><h3>SAW Ranking</h3><p>Normalisasi, pembobotan, dan output ranking transparan.</p><a href="../../docs/decision-support.md">Baca usage</a></div><div class="card"><h3>Input Format</h3><p>Format record dan kriteria untuk proses ranking.</p><a href="../../docs/decision-support-input-format.md">Baca format</a></div><div class="card"><h3>Examples</h3><p>Sample records dan criteria fiktif untuk validasi konsep.</p></div></div>
+      </section>
+
+      <section id="recommendation">
+        <div class="section-head"><h2>Recommendation Engine</h2><p>Utility sederhana untuk mengubah topic score menjadi rekomendasi review, prioritas, dan difficulty latihan.</p></div>
+        <div class="grid"><div class="card"><h3>Recommendation Input</h3><p>Format input dari topic summaries.</p><a href="../../docs/recommendation-input-format.md">Baca format</a></div><div class="card"><h3>Recommendation Output</h3><p>Weak topics, strong topics, action, priority, dan difficulty.</p><a href="../../docs/recommendations.md">Baca usage</a></div><div class="card"><h3>Next Practice</h3><p>Arah awal menuju adaptive practice dan rekomendasi materi.</p></div></div>
+      </section>
+
+      <section id="roadmap">
+        <div class="section-head"><h2>Roadmap</h2><p>Proyek dibangun bertahap agar tetap realistis, modular, dan bisa dikontribusi.</p></div>
+        <div class="timeline"><div class="step"><strong>1. Dataset</strong><span>Standar soal.</span></div><div class="step"><strong>2. Tools</strong><span>Validator dan converter.</span></div><div class="step"><strong>3. Generate</strong><span>Request, draft, review.</span></div><div class="step"><strong>4. Analysis</strong><span>Topic summary.</span></div><div class="step"><strong>5. Decision</strong><span>SAW ranking.</span></div><div class="step"><strong>6. Recommendation</strong><span>Next learning action.</span></div></div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="wrap">Edutive Open Learning Toolkit — static landing page preview.</div></footer>
+  </body>
+</html>
