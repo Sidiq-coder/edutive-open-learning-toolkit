@@ -1,0 +1,19 @@
+{
+  "participant_id": "P001",
+  "weak_topic_threshold": 60,
+  "strong_topic_threshold": 80,
+  "topic_scores": [
+    {
+      "topic": "Arithmetic",
+      "percentage": 40
+    },
+    {
+      "topic": "Fractions",
+      "percentage": 70
+    },
+    {
+      "topic": "Geometry",
+      "percentage": 90
+    }
+  ]
+}
