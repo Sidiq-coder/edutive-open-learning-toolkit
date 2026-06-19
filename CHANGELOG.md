@@ -1,5 +1,31 @@
 # Changelog
 
+## Unreleased - React UI Rewrite
+
+### Changed
+
+- Replaced static HTML UI previews with a React + TypeScript app.
+- Added Vite-based UI app in `apps/edutive-ui`.
+- Added reusable UI components for buttons, cards, badges, section headers, navigation, feature cards, workflow steps, generate form, question preview, and dataset preview.
+- Added data-driven navigation, feature map, workflow, and question preview data.
+- Added controlled form state for the Generate Soal prototype.
+- Removed old standalone static HTML pages from `apps/generate-soal-preview` and `apps/project-landing`.
+- Updated legacy preview READMEs to point to the React app.
+
+### New UI app
+
+```text
+apps/edutive-ui
+```
+
+Run locally:
+
+```bash
+cd apps/edutive-ui
+npm install
+npm run dev
+```
+
 ## v0.7.0 - Generate Soal Workflow
 
 This release improves the product direction around Generate Soal and adds a landing page preview for the whole project.
@@ -101,88 +127,3 @@ This release introduces the first transparent decision support utility for Eduti
 - Decision support criteria examples.
 - Tests for SAW ranking behavior.
 - Decision support usage documentation.
-
-### Decision support features
-
-- Benefit criteria support.
-- Cost criteria support.
-- Value normalization.
-- Weighted scoring.
-- Ranked output sorted by final score.
-- Stable tie breaker by record ID.
-
-### New files
-
-- `docs/decision-support-input-format.md`
-- `docs/decision-support.md`
-- `examples/decision-support/sample-records.json`
-- `examples/decision-support/sample-criteria.json`
-- `examples/decision-support/README.md`
-- `packages/question-tools/src/saw-ranking.ts`
-- `packages/question-tools/src/saw-ranking.test.ts`
-
-### Updated files
-
-- `packages/question-tools/src/index.ts`
-- `CHANGELOG.md`
-
-### Recommended checks
-
-```bash
-npm run check
-npm test
-npm run validate:examples
-```
-
-### Notes
-
-This release adds a baseline ranking method. It is intended as a transparent helper and should not replace educator judgment.
-
-## v0.4.0 - Learning Analysis Engine
-
-This release introduces the first learning analysis utilities for Edutive Open Learning Toolkit.
-
-### Added
-
-- Practice result format documentation.
-- Database recommendation notes for future implementation.
-- Topic summary utility.
-- Practice result example records.
-- Tests for topic summary behavior.
-- Learning analysis usage documentation.
-
-### Learning analysis features
-
-- Match practice result records with question metadata by `question_id`.
-- Group records by topic.
-- Count total records per topic.
-- Count successful records per topic.
-- Calculate topic percentage.
-- Track unmatched question IDs.
-- Return JSON-friendly topic summary output.
-
-### New files
-
-- `docs/practice-result-format.md`
-- `docs/learning-analysis.md`
-- `examples/practice-results/sample-results.json`
-- `packages/question-tools/src/topic-summary.ts`
-- `packages/question-tools/src/topic-summary.test.ts`
-
-### Updated files
-
-- `docs/roadmap.md`
-- `README.md`
-- `packages/question-tools/src/index.ts`
-
-### Recommended checks
-
-```bash
-npm run check
-npm test
-npm run validate:examples
-```
-
-### Notes
-
-This release is still intentionally small. It is not a full diagnostic engine yet. It provides the foundation for future decision support and recommendation features.
