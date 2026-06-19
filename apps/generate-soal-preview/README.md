@@ -1,19 +1,17 @@
 # Generate Soal Preview
 
-This is an early static UI preview for the future Edutive question generation workflow.
+This static HTML preview has been replaced by the React app in:
 
-The prototype focuses on the current product direction:
+```text
+apps/edutive-ui
+```
 
-- generating structured questions,
-- reviewing answer keys,
-- showing explanations,
-- showing common misconceptions,
-- preparing dataset-ready output.
+Run the React UI locally:
 
-This is not a production app yet. It is a visual reference for future development.
+```bash
+cd apps/edutive-ui
+npm install
+npm run dev
+```
 
-## Open locally
-
-Open `index.html` in a browser.
-
-No build step is required.
+The Generate Soal experience now lives inside reusable React components instead of a standalone static HTML page.
