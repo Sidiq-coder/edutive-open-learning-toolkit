@@ -1,16 +1,17 @@
 # Edutive Project Landing Preview
 
-This is a static landing page preview for introducing the whole Edutive Open Learning Toolkit project.
+This static HTML landing page has been replaced by the React app in:
 
-The page introduces:
+```text
+apps/edutive-ui
+```
 
-- Generate Soal
-- Question Dataset Tools
-- Learning Analysis
-- Decision Support
-- Recommendation Engine
-- Teacher Insight direction
+Run the React UI locally:
 
-Open `index.html` directly in a browser.
+```bash
+cd apps/edutive-ui
+npm install
+npm run dev
+```
 
-No build step is required.
+The project landing page now lives inside reusable React components instead of a standalone static HTML page.
